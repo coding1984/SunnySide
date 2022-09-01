@@ -1,0 +1,226 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainShowcase{
+    height:100vh;
+    background-image: url(images/desktop/image-header.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+}
+.container{
+    width:90%;
+    margin:0 auto;
+}
+.mainShowcase .flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:60px;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    height:60px;
+ 
+}
+.mainShowcase nav ul{
+    display:flex;
+    align-items: center;
+    gap:0px 10px;
+}
+.mainShowcase nav ul li{
+    list-style:none;
+}
+.mainShowcase nav ul li a{
+    text-decoration:none;
+    font-size:12px;
+    padding:8px 20px;
+
+}
+.navitems a:hover{
+    background-color:rgb(255, 255, 255);
+    border-radius: 20px;
+    color:black;
+    padding:8px 20px;
+}
+
+.active{
+    background-color:rgb(255, 255, 255);
+    border-radius: 20px;
+    color:black;
+    padding:8px 20px;
+}
+.gridWrap{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(200px, 1710.5px));
+    grid-template-rows: repeat(3,1fr);
+    justify-content:center;
+}
+.gridWrap .mainItems img{
+    width:100%;
+    height:100%;
+}
+.gridWrap .mainItems:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.submainitmes{
+    width:70%;
+}
+.submainitmes h1{
+    font-size:clamp(1rem, 4.6vw, 5.5rem);
+    padding-bottom:20px;
+    line-height: 70px;
+} 
+.submainitmes p{
+    padding-bottom:20px;
+    line-height: 35px;
+    color:rgb(136, 136, 136);
+}
+.gridWrap .mainItems:nth-of-type(2){
+    background-color: rgb(217, 148, 57);
+}
+.gridWrap .mainItems:nth-of-type(3){
+    background-color: rgb(158, 248, 142);
+}
+.gridWrap .mainItems:nth-of-type(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.gridWrap .mainItems:nth-of-type(5){
+    background-color: rgb(143, 49, 167);
+}
+.gridWrap .mainItems:nth-of-type(6){
+    background-color: rgb(200, 48, 91);
+}
+.textOnImage{
+    position: relative;
+}
+.textWithImage{
+    position: absolute;
+    z-index:999;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    /* margin: -25px 0 0 -25px; */
+}
+.textOnImage h2{
+    padding:20px;
+    font-size:clamp(1rem,2vw,2rem);
+}
+.textOnImage p{
+    line-height:25px;
+}
+.flexTestimonia{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    gap: 20px;
+    padding: 30px 0px;
+}
+.flexTestimonia img{
+    border-radius:50%;
+}
+.flexTestimonia p{
+    padding-top:20px;
+    line-height:25px;
+}
+.flexTestimonia h3{
+    padding-top:25px;
+}
+.flexTestimonia h3 + p{
+    padding-top:5px;
+    color:rgb(136, 136, 136);
+} 
+.footerImagesFles{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+    flex-wrap: wrap;
+    
+}
+.footerImagesFles img{
+flex:1;
+max-width:50%;
+}
+.fa-rectangle-list{
+    display: none;
+}
+
+@media(max-width:800px){
+    .gridWrap{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(200px, 1710.5px));
+        grid-template-rows: repeat(6,1fr);
+        justify-content:center;
+    }
+    .flexTestimonia{
+        display:flex;
+        justify-content:space-between;
+        flex-direction: column;
+        text-align:center;
+        gap: 20px;
+        padding: 30px 0px;
+    }
+    .footerImagesFles img{
+        max-width:100%;
+        }
+    .mainShowcase{
+        height:100vh;
+        background-image: url(images/mobile/image-header.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+    .mainShowcase{
+        position: relative;
+        background-color: antiquewhite; 
+    }
+    .mainShowcase nav{
+        position: absolute;
+        left:0;
+        top:0px;
+        background-color: rgb(129, 209, 255);
+        width:200px;
+        height:100vh;
+        transform:translateX(-200px);
+        transition: transform 0.5s ease;
+    }
+    .mainShowcase nav ul{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        height:250px;
+    }
+    .fa-rectangle-list{
+        display: inline;
+        font-size:2.5rem;
+        color:white;
+        cursor:pointer;
+    }
+
+
+
+} 
+@media(max-width:450px){
+    .mainShowcase{
+        height:90vh;
+        background-image: url(images/mobile/image-header.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+}
